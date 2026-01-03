@@ -60,7 +60,7 @@ To install the app on your Android device, download the latest APK from the link
 *   **Language:** Java (JDK 11)
 *   **Database:** SQLite (Android Native)
 *   **Minimum SDK:** API 24 (Android 7.0)
-*   **Target SDK:** API 31 (Android 12)
+*   **Target SDK:** API 36 (Android 16)
 *   **Architecture:** MVC Pattern
 *   **UI Components:** XML, ConstraintLayout, Material Components, CardView, RecyclerView
 
