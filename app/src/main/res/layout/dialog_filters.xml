@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:layoutDirection="rtl"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="4dp"
+        android:background="#E0E0E0"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="فیلتر و مرتب‌سازی"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="مرتب‌سازی بر اساس:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:gravity="right"/>
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layoutDirection="rtl">
+        <RadioButton
+            android:id="@+id/rbNewest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="جدید"
+            android:checked="true"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="8dp"/>
+        <RadioButton
+            android:id="@+id/rbOldest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="قدیمی"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="8dp"/>
+        <RadioButton
+            android:id="@+id/rbExpensive"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="گران"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="8dp"/>
+        <RadioButton
+            android:id="@+id/rbCheap"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ارزان"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="8dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="دسته‌بندی:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:gravity="right"/>
+
+    <Spinner
+        android:id="@+id/spinnerFilterCat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_chip"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:gravity="right"
+        android:popupBackground="@drawable/bg_spinner_popup"/>
+
+    <Spinner
+        android:id="@+id/spinnerFilterSubCat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_chip"
+        android:layout_marginBottom="20dp"
+        android:padding="4dp"
+        android:gravity="right"
+        android:enabled="false"
+        android:popupBackground="@drawable/bg_spinner_popup"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="محدوده قیمت (تومان):"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="32dp"
+        android:layoutDirection="rtl">
+        <EditText
+            android:id="@+id/etMinPrice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_chip"
+            android:hint="حداقل"
+            android:inputType="number"
+            android:padding="12dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تا"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="12dp"/>
+        <EditText
+            android:id="@+id/etMaxPrice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_chip"
+            android:hint="حداکثر"
+            android:inputType="number"
+            android:padding="12dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="اعمال فیلتر"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                app:cornerRadius="8dp"/>
+        </FrameLayout>
+
+        <View android:layout_width="12dp" android:layout_height="1dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="حذف فیلتر"
+                android:backgroundTint="#FFEBEE"
+                android:textColor="#D32F2F"
+                android:gravity="center"
+                app:cornerRadius="8dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
