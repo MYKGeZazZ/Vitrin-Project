@@ -40,7 +40,7 @@ To install the app on your Android device, download the latest APK from the link
 
 <div align="center">
 
-### 📥 [Download Latest APK (v1.0)](https://github.com/MYKGeZazZ/Vitrin-Project/releases/latest)
+### 📥 [Download Latest APK (v1.0.0)](https://github.com/MYKGeZazZ/Vitrin-Project/releases/latest)
 
 </div>
 
